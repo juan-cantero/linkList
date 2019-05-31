@@ -8,7 +8,15 @@ public class Main {
     list.addToFront(6);
     list.addToFront(7);
     list.addToFront(8);
+    
 
+    
+    list.add(2, 55);
+    
+    list.printList();
+    list.delete(2);
+    list.printList();
+    
     System.out.println(list.getAt(2));
 
   }
