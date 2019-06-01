@@ -4,20 +4,22 @@ public class Main {
     IntegerLinkList list = new IntegerLinkList();
 
     list.addToFront(4);
-    list.addToFront(5);
-    list.addToFront(6);
-    list.addToFront(7);
-    list.addToFront(8);
+    list.addToFront(3);
+    list.addToFront(2);
+    list.addToFront(1);
+    list.addToFront(0);
     
 
     
-    list.add(2, 55);
+    
     
     list.printList();
-    list.delete(2);
+    
+    
+    list.interchangePos(1,4 ); 
     list.printList();
     
-    System.out.println(list.getAt(2));
+    
 
   }
 }

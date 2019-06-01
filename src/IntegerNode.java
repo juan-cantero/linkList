@@ -21,6 +21,8 @@ public class IntegerNode {
   public void setNextNode(IntegerNode nextNode) {
     this.nextNode = nextNode;
   }
+  
+  
 
 
 

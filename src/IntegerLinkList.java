@@ -113,8 +113,55 @@ public class IntegerLinkList {
 	  }
   }
   
+  public void setElement(int pos, int n) {
+	  if(!this.isEmpty() && pos < size) {
+	  
+	  
+	  IntegerNode current = this.head;
+	  for (int i = 0; i < pos -1; i++) {
+		  current = current.getNextNode();
+	  }
+	  current.nextNode.setData(n);
+	  }
+	 
+  }
+  
   public void emptyList() {
 	  this.setHead(null);
+  }
+  
+  public void interchangeFirstAndSecondElement() {
+	  if (!this.isEmpty()) {
+		  IntegerNode aux = this.head.nextNode;
+		  this.head.nextNode = aux.nextNode;
+		  aux.nextNode = this.head;
+		  this.head = aux;
+	  }
+  }
+  
+public void interchangePos(int pos1, int pos2) {
+	IntegerNode current1 =this.head;
+	IntegerNode current2 = this.head;
+	
+	for (int i = 0; i < pos1 -1; i++) {
+		current1 = current1.nextNode;
+	}
+	
+	for (int j = 0; j < pos2 -1; j++) {
+		current2 = current2.nextNode;
+	}
+	
+	IntegerNode t1 = current1.nextNode;
+	IntegerNode t2 = current2.nextNode;
+	
+	current1.nextNode = t1.nextNode;
+	current2.nextNode = t2.nextNode;
+	t1.nextNode = current2.nextNode;
+	t2.nextNode = current1.nextNode;
+	current1.nextNode = t2;
+	current2.nextNode = t1;
+	
+	
   }
   
   
