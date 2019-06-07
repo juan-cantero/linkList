@@ -163,6 +163,29 @@ public void interchangePos(int pos1, int pos2) {
 	
 	
   }
+	
+	public void setAll(IntegerLinkList list) {
+	this.tail.nextNode = list.head;
+	
+}
+
+public void deleteOcurrencesOf(int n) {
+	int count =0;
+	IntegerNode current = new IntegerNode();
+	current.nextNode = this.head;
+	while (current.nextNode != null) {
+		if(current.nextNode.data == n) {
+			current.nextNode = (current.nextNode).nextNode;
+		if (this.head.data == n) {
+			this.head = this.head.nextNode;
+		}
+			count += 1;
+		}
+		current = current.nextNode;
+	}
+	System.out.println(count);
+}
+  
   
   
 
